@@ -10,6 +10,9 @@ import NewMovie from "./pages/NewMovie";
 import styles from "./App.module.css";
 
 const App = () => {
+  function addMovieHandler(movie) {
+    console.log(movie);
+  }
   return (
     <div className={styles.app}>
       <Routes>
@@ -17,7 +20,10 @@ const App = () => {
           <Route index element={<Movies />} />
           <Route path="heroes" element={<Heroes />} />
           <Route path="spaceships" element={<Spaceships />} />
-          <Route path="adding-movie" element={<NewMovie />} />
+          <Route
+            path="adding-movie"
+            element={<NewMovie onAddMovie={addMovieHandler} />}
+          />
         </Route>
       </Routes>
     </div>
