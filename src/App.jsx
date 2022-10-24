@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useCallback } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Layout from "./pages/Layout";
@@ -10,9 +10,8 @@ import NewMovie from "./pages/NewMovie";
 import styles from "./App.module.css";
 
 const App = () => {
-  function addMovieHandler(movie) {
-    console.log(movie);
-  }
+  
+
   return (
     <div className={styles.app}>
       <Routes>
@@ -20,10 +19,7 @@ const App = () => {
           <Route index element={<Movies />} />
           <Route path="heroes" element={<Heroes />} />
           <Route path="spaceships" element={<Spaceships />} />
-          <Route
-            path="adding-movie"
-            element={<NewMovie onAddMovie={addMovieHandler} />}
-          />
+          <Route path="adding-movie" element={<NewMovie />} />
         </Route>
       </Routes>
     </div>
