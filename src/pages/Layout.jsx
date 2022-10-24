@@ -15,18 +15,18 @@ const Layout = () => {
             </Link>
           </li>
           <li>
-            <Link to="/about" className={styles.link}>
-              About
+            <Link to="/heroes" className={styles.link}>
+              Heroes
             </Link>
           </li>
           <li>
-            <Link to="/blogs" className={styles.link}>
-              Blogs
+            <Link to="/spaceships" className={styles.link}>
+              Spaceships
             </Link>
           </li>
           <li>
-            <Link to="/contacts" className={styles.link}>
-              Contacts
+            <Link to="/adding-movie" className={styles.link}>
+              Add New Movie
             </Link>
           </li>
           <SignIn />
