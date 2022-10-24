@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Layout from "./pages/Layout";
@@ -10,8 +10,6 @@ import NewMovie from "./pages/NewMovie";
 import styles from "./App.module.css";
 
 const App = () => {
-  
-
   return (
     <div className={styles.app}>
       <Routes>

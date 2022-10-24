@@ -1,10 +1,15 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
+import { auth } from "../firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
 import SignIn from "../components/SignIn";
+import SignOut from "../components/SignOut";
 
 import styles from "./Layout.module.css";
 
 const Layout = () => {
+  const [user] = useAuthState(auth);
+
   return (
     <React.Fragment>
       <nav className={styles.layout}>
@@ -29,7 +34,8 @@ const Layout = () => {
               Add New Movie
             </Link>
           </li>
-          <SignIn />
+          {user ? "" : <SignIn />}
+          {user ? <SignOut /> : ""}
         </ul>
       </nav>
 
