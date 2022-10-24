@@ -11,7 +11,7 @@ const Layout = () => {
         <ul className={styles.nav}>
           <li>
             <Link to="/" className={styles.link}>
-              Home
+              Movies
             </Link>
           </li>
           <li>
